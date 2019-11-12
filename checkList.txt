@@ -1,0 +1,17 @@
+// Tutorials
+Human Voice Patterns Recognition {
+    https://www.youtube.com/watch?v=RHmTgapLu4s
+}
+Machine learning {
+    https://www.youtube.com/watch?v=45ryDIPHdGg&t=190s
+}
+
+// Metodology
+http://pedrofcarvalho.com.br/PDF/ENGENHARIA_CICLO_VIDA_AGIL.pdf
+
+//Mari's Paper
+https://siaiap32.univali.br/seer/index.php/acotb/article/view/14332/8112
+
+// Additional features.
+Natural Language Processing
+Chatter bots
