@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"Houser.Routine"}],"uuid":"861b1a29c7b24dd08c4cac5a0b7f0122"}
