@@ -4,18 +4,18 @@ from speechCreator import voice
 
 houser = sr.Recognizer()
 
-speech = ""
+speech = ''
 
-while(speech != "goodbye Houser"):
+while(speech != 'goodbye Houser'):
   with sr.Microphone() as source:
-    print("----------Start----------")
+    print('----------Start----------')
     audio = houser.listen(source)
-    print("----recording is over----")
+    print('----recording is over----')
 
   try:
-    speech = "" + houser.recognize_google(audio)
-    print("Person said: " + speech)
-    if(speech == "data from mongo"):
-      voice(speech)
+    speech = '' + houser.recognize_google(audio)
+    print('Person said: ' + speech)
+    if(speech == 'ask from mongo'):
+      voice('answer from mongo')
   except:
     pass
