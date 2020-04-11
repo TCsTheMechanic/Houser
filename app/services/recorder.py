@@ -1,9 +1,12 @@
 import os
 import speech_recognition as sr
 from speechCreator import voice
+from db.connection import connect
+
+database = connect()
+dialog_collection = database.Dialog
 
 houser = sr.Recognizer()
-
 speech = ''
 
 while(speech != 'goodbye Houser'):
