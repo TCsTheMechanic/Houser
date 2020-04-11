@@ -14,8 +14,12 @@ Houser is my final college project, inspirated by Friday, Iron Man's AI from the
 
 To install the modules run: `pip install requirements.txt`
 
+To insert default commands to databse run: `python db/seed.py`
+
 ## Ubuntu 
 
 To install the modules run: `pip3 install requirements.txt`
 
 To install pyaudio run: `sudo apt-get install python3-pyaudio`
+
+To insert default commands to databse run: `python3 db/seed.py`
