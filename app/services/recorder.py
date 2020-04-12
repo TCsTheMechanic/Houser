@@ -17,9 +17,10 @@ def listener(connect, voice):
     try:
       speech = '' + houser.recognize_google(audio)
       print('Person said: ' + speech)
-      for dialog in dialog_collection:
-        print(dialog)
+      for dialog in dialog_collection.find():
         if(speech == dialog['question']):
           voice(dialog['answer'])
+        else:
+          voice("sorry, I couldn't understand, can you please repeat?")
     except:
       pass
