@@ -1,1 +1,0 @@
-{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"Houser.Dialog"}],"uuid":"47e4ce5c2c824d589d3ba7efb5029688"}
