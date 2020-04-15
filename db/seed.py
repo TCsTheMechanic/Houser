@@ -6,11 +6,15 @@ def dialog_seeder(connect):
       'answer': 'how can I help you?'
     },
     {
-      'question': 'can you turn on the light?',
+      'question': 'can you turn on the light',
       'answer': 'yes, please tell me the room'
     },
     {
       'question': 'goodbye Houser',
       'answer': 'goodbye'
+    },
+    {
+      'question': 'listening error',
+      'answer': "sorry, I couldn't understand, can you please repeat?"
     }
   ])
