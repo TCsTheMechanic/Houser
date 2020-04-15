@@ -2,7 +2,7 @@ def dialog_seeder(connect):
 
   connect.Dialog.insert_many([
     {
-      'question': 'hey houser',
+      'question': 'hey Houser',
       'answer': 'how can I help you?'
     },
     {
