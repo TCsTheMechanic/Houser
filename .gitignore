@@ -1,3 +1,6 @@
+# Ignore audio files
+.mp3
+
 # Ignore python files
 __pycache__
 

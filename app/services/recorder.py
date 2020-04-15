@@ -1,9 +1,8 @@
-import os
 import speech_recognition as sr
+import os
 
-def listener(connect, voice):
-  database = connect
-  dialog_collection = database.Dialog
+def listener(connect):
+  dialog_collection = connect.Dialog
 
   houser = sr.Recognizer()
   speech = ''
@@ -19,8 +18,8 @@ def listener(connect, voice):
       print('Person said: ' + speech)
       for dialog in dialog_collection.find():
         if(speech == dialog['question']):
-          voice(dialog['answer'])
+          os.system('cd app/assets/audios & "' + dialog['question'] + '.mp3"')
         else:
-          voice("sorry, I couldn't understand, can you please repeat?")
+          os.system('cd app/assets/audios & "listening error.mp3"')
     except:
       pass
