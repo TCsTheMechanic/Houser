@@ -1,5 +1,4 @@
 from gtts import gTTS
-import os
 
 def voice(connect):
   dialog_collection = connect.Dialog
