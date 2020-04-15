@@ -14,6 +14,10 @@ def dialog_seeder(connect):
       'answer': 'goodbye'
     },
     {
+      'question': 'introduction',
+      'answer': "Hello, my name is Houser and I'm Eduardo Cerutti's final project, nice to meet you"
+    },
+    {
       'question': 'listening error',
       'answer': "sorry, I couldn't understand, can you please repeat?"
     }
