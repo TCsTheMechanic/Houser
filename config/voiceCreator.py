@@ -6,4 +6,5 @@ def voice(connect):
 
   for dialog in dialog_collection.find():
     tts = gTTS(text=dialog['answer'], lang='en')
-    tts.save('app/assets/audios/' + dialog['answer'] + '.mp3')
+    # I chose to name the audio by question bc question never have special char
+    tts.save('app/assets/audios/' + dialog['question'] + '.mp3')
