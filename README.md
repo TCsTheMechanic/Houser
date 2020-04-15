@@ -12,13 +12,17 @@ Houser is my final college project, inspirated by Friday, Iron Man's AI from the
 
 ## Windows
 
+Install [MongoDB](https://www.mongodb.com/download-center/community) database
+
 To install the modules run: `pip install requirements.txt`
 
 To setup the project run: `python setup.py`
 
 To start the system run: `python start.py`
 
-## Ubuntu 
+## Ubuntu
+
+Install [MongoDB](https://www.mongodb.com/download-center/community) database
 
 To install the modules run: `pip3 install requirements.txt`
 
