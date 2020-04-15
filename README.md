@@ -16,7 +16,7 @@ Install [MongoDB](https://www.mongodb.com/download-center/community) database
 
 To install the modules run: `pip install requirements.txt`
 
-To setup the project run: `python setup.py`
+To setup the project run: `python setup.py` (this may take a while)
 
 To start the system run: `python start.py`
 
@@ -28,6 +28,6 @@ To install the modules run: `pip3 install requirements.txt`
 
 To install pyaudio run: `sudo apt-get install python3-pyaudio`
 
-To setup the project run: `python3 setup.py`
+To setup the project run: `python3 setup.py` (this may take a while)
 
 To start the system run: `python3 start.py`
