@@ -16,10 +16,13 @@ def listener(connect):
     try:
       speech = '' + houser.recognize_google(audio)
       print('Person said: ' + speech)
+      understood = False
       for dialog in dialog_collection.find():
-        if(speech == dialog['question']):
-          os.system('cd app/assets/audios & "' + dialog['question'] + '.mp3"')
-        else:
-          os.system('cd app/assets/audios & "listening error.mp3"')
+        if (speech == dialog['question']):
+          understood = dialog['question']
+      if (understood != False):
+        os.system('cd app/assets/audios & "' + understood + '.mp3"')
+      else:
+        os.system('cd app/assets/audios & "listening error.mp3"')
     except:
       pass
