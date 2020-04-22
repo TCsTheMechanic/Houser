@@ -1,6 +1,11 @@
-def dialog_seeder(connect):
+from db.connection import connect
 
-  connect.Dialog.insert_many([
+def __init__():
+  pass
+
+def dialog_seeder():
+
+  connect().Dialog.insert_many([
     {
       'question': 'hello Houser',
       'answer': 'how can I help you?'
@@ -14,7 +19,7 @@ def dialog_seeder(connect):
       'answer': 'goodbye'
     },
     {
-      'question': 'introduction',
+      'question': 'who are you',
       'answer': "Hello, my name is Houser and I'm Eduardo Cerutti's final project, nice to meet you"
     },
     {

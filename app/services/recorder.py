@@ -1,8 +1,12 @@
+from db.connection import connect
 import speech_recognition as sr
 import os
 
-def listener(connect):
-  dialog_collection = connect.Dialog
+def __init__():
+  pass
+
+def listener():
+  dialog_collection = connect().Dialog
 
   houser = sr.Recognizer()
   speech = ''

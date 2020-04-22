@@ -1,8 +1,12 @@
+from db.connection import connect
 from gtts import gTTS
 import os
 
-def voice(connect):
-  dialog_collection = connect.Dialog
+def __init__():
+  pass
+
+def voice():
+  dialog_collection = connect().Dialog
 
   for dialog in dialog_collection.find():
     if (os.path.isfile('app/assets/audios/' + dialog['question'] + '.mp3') == False):
