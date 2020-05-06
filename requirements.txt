@@ -1,4 +1,4 @@
 gTTS==2.1.1
 numpy==1.18.1
 SpeechRecognition==3.8.1
-thinkx==1.1.3
+PyAudio==0.2.11
