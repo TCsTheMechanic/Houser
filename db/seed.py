@@ -19,6 +19,10 @@ def dialog_seeder():
       'answer': 'goodbye'
     },
     {
+      'command': 'add another person',
+      'answer': 'alright, please, say hey houser three times'
+    },
+    {
       'command': 'who are you',
       'answer': "Hello, my name is Houser and I'm Eduardo Cerutti's final project, nice to meet you"
     },
