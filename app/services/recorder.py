@@ -22,8 +22,8 @@ def listener():
       print('Person said: ' + speech)
       understood = False
       for dialog in dialog_collection.find():
-        if (speech == dialog['question']):
-          understood = dialog['question']
+        if (speech == dialog['command']):
+          understood = dialog['command']
       if (understood != False):
         os.system('cd app/assets/audios & "' + understood + '.mp3"')
       else:

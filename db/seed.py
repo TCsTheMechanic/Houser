@@ -7,23 +7,23 @@ def dialog_seeder():
 
   connect().Dialog.insert_many([
     {
-      'question': 'hello Houser',
+      'command': 'hello Houser',
       'answer': 'how can I help you?'
     },
     {
-      'question': 'can you turn on the light',
+      'command': 'can you turn on the light',
       'answer': 'yes, please tell me the room'
     },
     {
-      'question': 'goodbye Houser',
+      'command': 'goodbye Houser',
       'answer': 'goodbye'
     },
     {
-      'question': 'who are you',
+      'command': 'who are you',
       'answer': "Hello, my name is Houser and I'm Eduardo Cerutti's final project, nice to meet you"
     },
     {
-      'question': 'listening error',
+      'command': 'listening error',
       'answer': "sorry, I couldn't understand, can you please repeat?"
     }
   ])
