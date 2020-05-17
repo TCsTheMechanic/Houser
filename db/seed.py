@@ -27,15 +27,15 @@ def dialog_seeder():
       'answer': "Hello, my name is Houser and I'm Eduardo Cerutti's final project, nice to meet you"
     },
     {
-      'command': 'ask frequency 1',
+      'command': 'ask frequency 0',
       'answer': 'say the first time please'
     },
     {
-      'command': 'ask frequency 2',
+      'command': 'ask frequency 1',
       'answer': 'the second'
     },
     {
-      'command': 'ask frequency 3',
+      'command': 'ask frequency 2',
       'answer': 'and the last one'
     },
     {

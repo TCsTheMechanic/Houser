@@ -22,7 +22,7 @@ def start():
 
     if (understood != False):
       if (understood == 'add another person'):
-        os.system('cd app/assets/audios & "command as person name.mp3"')
+        os.system('cd app/assets/audios & "command ask person name.mp3"')
         person_name = listener(houser)
         catcher(person_name)
       else:
