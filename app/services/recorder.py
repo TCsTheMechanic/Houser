@@ -1,4 +1,5 @@
 from db.connection import connect
+from frequency import catcher
 import speech_recognition as sr
 import os
 
@@ -25,7 +26,12 @@ def listener():
         if (speech == dialog['command']):
           understood = dialog['command']
       if (understood != False):
-        os.system('cd app/assets/audios & "' + understood + '.mp3"')
+        if (understood == 'add another person'):
+          os.system('cd app/assets/audios & "command as person name.mp3"')
+          person_name = ''
+          catcher(person_name)
+        else:
+          os.system('cd app/assets/audios & "' + understood + '.mp3"')
       else:
         os.system('cd app/assets/audios & "listening error.mp3"')
     except:
