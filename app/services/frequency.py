@@ -27,8 +27,12 @@ def catcher(user_name):
 
   for index in range(3):
     os.system('cd app/assets/audios & "ask frequency ' + index + '.mp3"')
+    
     data_array = []
+    print('----------Start----------')
     data = stream.read(CHUNK)
+    print('----recording is over----')
+
     data_integer = struct.unpack(str(2 * CHUNK) + 'B', data)
     data_array << np.array(data_integer, dtype = 'b')[::2]
     person_collection.inser_one(
@@ -39,4 +43,4 @@ def catcher(user_name):
       }
     )
 
-  os.system('cd app/assets/audios & "command nice to meet you.mp3"'')
+  os.system('cd app/assets/audios & "command nice to meet you.mp3"')
