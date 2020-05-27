@@ -1,8 +1,8 @@
+from app.services.system import reply
 from db.connection import connect
 import numpy as np
 import pyaudio
 import struct
-import os
 
 def __init__():
   pass
@@ -23,10 +23,10 @@ def catcher(user_name):
     frames_per_buffer = CHUNK
   )
 
-  os.system('cd app/assets/audios & "add another person.mp3"')
+  reply('add another person')
 
   for index in range(3):
-    os.system('cd app/assets/audios & "ask frequency ' + index + '.mp3"')
+    reply('ask frequency ' + index)
     
     data_array = []
     print('----------Start----------')
@@ -43,4 +43,4 @@ def catcher(user_name):
       }
     )
 
-  os.system('cd app/assets/audios & "command nice to meet you.mp3"')
+  reply('command nice to meet you')
