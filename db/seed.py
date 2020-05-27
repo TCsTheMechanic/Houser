@@ -20,35 +20,35 @@ def dialog_seeder():
     },
     {
       'command': 'add another person',
-      'answer': 'alright, please, when I ask you will say hey houser three times'
+      'answer': "what's the person's name?"
     },
     {
       'command': 'who are you',
       'answer': "Hello, my name is Houser and I'm Eduardo Cerutti's final project, nice to meet you"
     },
     {
-      'command': 'ask frequency 0',
-      'answer': 'say the first time please'
-    },
-    {
-      'command': 'ask frequency 1',
-      'answer': 'the second'
-    },
-    {
-      'command': 'ask frequency 2',
-      'answer': 'and the last one'
-    },
-    {
       'command': 'thank you',
       'answer': "you're welcome"
     },
     {
-      'command': 'command nice to meet you',
-      'answer': 'nice to meet you'
+      'command': 'command say houser 3 times',
+      'answer': 'alright, please, when I ask you will say hey houser three times'
     },
     {
-      'command': 'command ask person name',
-      'answer': "what's the person's name?"
+      'command': 'command ask frequency 0',
+      'answer': 'say the first time please'
+    },
+    {
+      'command': 'command ask frequency 1',
+      'answer': 'the second'
+    },
+    {
+      'command': 'command ask frequency 2',
+      'answer': 'and the last one'
+    },
+    {
+      'command': 'command nice to meet you',
+      'answer': 'nice to meet you'
     },
     {
       'command': 'command thanks',
