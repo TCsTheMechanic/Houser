@@ -55,7 +55,7 @@ def dialog_seeder():
       'answer': 'thank you'
     },
     {
-      'command': 'listening error',
+      'command': 'command listening error',
       'answer': "sorry, I couldn't understand, can you please repeat?"
     }
   ])
