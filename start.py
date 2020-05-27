@@ -1,3 +1,3 @@
-from app.services.recorder import start
+from app.services.main import start
 
 start()
