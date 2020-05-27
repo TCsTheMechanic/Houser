@@ -1,4 +1,4 @@
-from config.voiceCreator import voice
+from config.voice_creator import voice
 from db.seed import dialog_seeder
 import os 
 
