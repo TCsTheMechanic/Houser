@@ -23,10 +23,10 @@ def catcher(user_name):
     frames_per_buffer = CHUNK
   )
 
-  reply('add another person')
+  reply('command say houser 3 times')
 
   for index in range(3):
-    reply('ask frequency ' + index)
+    reply('command ask frequency ' + index)
     
     data_array = []
     print('----------Start----------')
