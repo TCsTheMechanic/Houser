@@ -3,6 +3,7 @@ from db.connection import connect
 import numpy as np
 import pyaudio
 import struct
+import time
 
 def __init__():
   pass
@@ -24,22 +25,27 @@ def catcher(user_name):
   )
 
   reply('command say houser 3 times')
+  time.sleep(5)
 
   for index in range(3):
-    reply('command ask frequency ' + index)
-    
-    data_array = []
+    reply('command ask frequency ' + str(index))
+    time.sleep(1)
+
+    record_timeout = time.time() + 3
+
     print('----------Start----------')
-    data = stream.read(CHUNK)
+
+    while (time.time() < record_timeout):
+      data = stream.read(CHUNK)
+      data_list = struct.unpack(str(2 * CHUNK) + 'B', data)
+
     print('----recording is over----')
 
-    data_integer = struct.unpack(str(2 * CHUNK) + 'B', data)
-    data_array << np.array(data_integer, dtype = 'b')[::2]
-    person_collection.inser_one(
+    person_collection.insert_one(
       {
-        'name': user_name,
         'sample': index,
-        'frequency': data_array
+        'name': user_name,
+        'frequency': data_list
       }
     )
 
