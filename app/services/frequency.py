@@ -1,6 +1,5 @@
 from app.services.system import reply
 from db.connection import connect
-import numpy as np
 import pyaudio
 import struct
 import time
