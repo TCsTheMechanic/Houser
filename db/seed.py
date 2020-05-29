@@ -32,7 +32,7 @@ def dialog_seeder():
     },
     {
       'command': 'command say houser 3 times',
-      'answer': 'alright, please, when I ask you will say hey houser three times'
+      'answer': 'alright, please, when I ask you will say hello Houser three times'
     },
     {
       'command': 'command ask frequency 0',
