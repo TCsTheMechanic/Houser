@@ -40,17 +40,17 @@ def listen_frequency(timeout):
   )
 
   record_timeout = time.time() + timeout
-  data_list = []
+  frequency_list = []
 
   print('----------Start----------')
 
   while (time.time() < record_timeout):
-    data = stream.read(CHUNK)
-    data_list.extend(struct.unpack(str(2 * CHUNK) + 'B', data))
+    frequency = stream.read(CHUNK)
+    frequency_list.extend(struct.unpack(str(2 * CHUNK) + 'B', frequency))
 
   print('----recording is over----')
 
-  return data_list
+  return frequency_list
 
 def reply(audio):
   os.system('cd app/assets/audios & "' + audio + '.mp3"')
