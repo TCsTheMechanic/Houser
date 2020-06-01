@@ -1,4 +1,4 @@
-from app.services.frequency import catcher
+from app.services import frequency
 from db.connection import connect
 from app.services import system
 import time
@@ -10,7 +10,7 @@ def start():
   dialog_collection = connect().Dialog
 
   while True:
-    speech = system.listen()
+    speech = system.listen_speech()
     understood = False
 
     for dialog in dialog_collection.find():
@@ -24,7 +24,7 @@ def start():
       elif (understood == 'add another person'):
         system.reply(understood)
         time.sleep(2)
-        person_name = system.listen()
-        catcher(person_name)
+        person_name = system.listen_speech()
+        frequency.catcher(person_name)
       else:
         system.reply(understood)
