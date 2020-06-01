@@ -6,9 +6,6 @@ import struct
 import time
 import os
 
-def __init__():
-  pass
-
 def listen_speech():
   houser = sr.Recognizer()
 

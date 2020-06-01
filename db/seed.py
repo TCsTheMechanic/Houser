@@ -1,8 +1,5 @@
 from db.connection import connect
 
-def __init__():
-  pass
-
 def dialog_seeder():
 
   connect().Dialog.insert_many([

@@ -3,9 +3,6 @@ from db.connection import connect
 from app.services import system
 import time
 
-def __init__():
-  pass
-
 def start():
   dialog_collection = connect().Dialog
 

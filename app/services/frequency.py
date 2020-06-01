@@ -2,9 +2,6 @@ from app.services import system
 from db.connection import connect
 import time
 
-def __init__():
-  pass
-
 def catcher(user_name):
   person_collection = connect().Person
 
