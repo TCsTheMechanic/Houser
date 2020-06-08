@@ -54,4 +54,25 @@ def reply(audio):
   os.system('cd app/assets/audios & "' + audio + '.mp3"')
 
 def voice_recon():
-  pass
+  person_collection = connect().Person
+
+  samples = []
+
+  for sample in person_collection.find():
+    samples.append(sample)
+
+  temporal_array = np.arange(len(samples[0]['frequency']))
+
+  frequency_array_0 = np.array((samples[0]['frequency'], temporal_array))
+  frequency_array_1 = np.array((samples[0]['frequency'], temporal_array))
+
+  linear = LinearRegression()
+  linear.fit(frequency_array_0, frequency_array_1)
+  acc = linear.score(frequency_array_0, frequency_array_1)
+  print(acc)
+  '''
+  if (acc > 80):
+    return True
+  else:
+    return False
+  '''
