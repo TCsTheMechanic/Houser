@@ -40,6 +40,10 @@ def dialog_seeder():
       'answer': 'alright, livingroom light is off'
     },
     {
+      'command': 'recognize',
+      'answer': 'Alright say hello houser'
+    },
+    {
       'command': 'goodbye Houser',
       'answer': 'goodbye'
     },

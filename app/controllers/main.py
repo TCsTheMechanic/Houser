@@ -23,5 +23,7 @@ def start():
         time.sleep(2)
         person_name = system.listen_speech()
         frequency.catcher(person_name)
+      elif (understood == 'recognize'):
+        system.voice_recon()
       else:
         system.reply(understood)
