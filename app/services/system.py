@@ -63,16 +63,18 @@ def voice_recon():
 
   temporal_array = np.arange(len(samples[0]['frequency']))
 
-  frequency_array_0 = np.array((samples[0]['frequency'], temporal_array))
-  frequency_array_1 = np.array((samples[0]['frequency'], temporal_array))
+  actual_voice = listen_frequency(3)
 
-  linear = LinearRegression()
-  linear.fit(frequency_array_0, frequency_array_1)
-  acc = linear.score(frequency_array_0, frequency_array_1)
-  print(acc)
-  '''
-  if (acc > 80):
-    return True
-  else:
-    return False
-  '''
+  frequency_array_0 = np.array((actual_voice, temporal_array))
+  
+  for sample in samples:
+    frequency_array_1 = np.array((sample['frequency'], temporal_array))
+
+    linear = LinearRegression()
+    linear.fit(frequency_array_0, frequency_array_1)
+    acc = linear.score(frequency_array_0, frequency_array_1)
+
+    if (acc > 80):
+      return True
+    else:
+      return False
