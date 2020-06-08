@@ -1,10 +1,13 @@
+from sklearn.linear_model import LinearRegression
+from db.connection import connect
 import speech_recognition as sr
+import numpy as np
+import pyaudio
+import struct
+import time
 import os
 
-def __init__():
-  pass
-
-def listen():
+def listen_speech():
   houser = sr.Recognizer()
 
   try:
@@ -18,10 +21,60 @@ def listen():
     return speech
 
   except:
-      pass
+    pass
+
+def listen_frequency(timeout):
+  CHUNK = 2048
+
+  houser = pyaudio.PyAudio()
+
+  stream = houser.open(
+    format = pyaudio.paInt16,
+    channels = 1,
+    rate = 44100,
+    input = True,
+    output = True,
+    frames_per_buffer = CHUNK
+  )
+
+  record_timeout = time.time() + timeout
+  frequency_list = []
+
+  print('----------Start----------')
+
+  while (time.time() < record_timeout):
+    frequency = stream.read(CHUNK)
+    frequency_list.extend(struct.unpack(str(2 * CHUNK) + 'B', frequency))
+
+  print('----recording is over----')
+
+  return frequency_list
 
 def reply(audio):
   os.system('cd app/assets/audios & "' + audio + '.mp3"')
 
 def voice_recon():
-  pass
+  person_collection = connect().Person
+
+  samples = []
+
+  for sample in person_collection.find():
+    samples.append(sample)
+
+  temporal_array = np.arange(len(samples[0]['frequency']))
+
+  actual_voice = listen_frequency(3)
+
+  frequency_array_0 = np.array((actual_voice, temporal_array))
+  
+  for sample in samples:
+    frequency_array_1 = np.array((sample['frequency'], temporal_array))
+
+    linear = LinearRegression()
+    linear.fit(frequency_array_0, frequency_array_1)
+    acc = linear.score(frequency_array_0, frequency_array_1)
+
+    if (acc > 80):
+      return True
+    else:
+      return False

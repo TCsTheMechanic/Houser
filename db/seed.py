@@ -1,8 +1,5 @@
 from db.connection import connect
 
-def __init__():
-  pass
-
 def dialog_seeder():
 
   connect().Dialog.insert_many([
@@ -11,8 +8,40 @@ def dialog_seeder():
       'answer': 'how can I help you?'
     },
     {
-      'command': 'can you turn on the light',
-      'answer': 'yes, please tell me the room'
+      'command': 'can you turn on the bedroom light',
+      'answer': 'alright, badroom light is on'
+    },
+    {
+      'command': 'can you turn on the bathroom light',
+      'answer': 'alright, bathroom light is on'
+    },
+    {
+      'command': 'can you turn on the kitchen light',
+      'answer': 'alright, kitchen light is on'
+    },
+    {
+      'command': 'can you turn on the livingroom light',
+      'answer': 'alright, livingroom light is on'
+    },
+    {
+      'command': 'can you turn off the bedroom light',
+      'answer': 'alright, badroom light is off'
+    },
+    {
+      'command': 'can you turn off the bathroom light',
+      'answer': 'alright, bathroom light is off'
+    },
+    {
+      'command': 'can you turn off the kitchen light',
+      'answer': 'alright, kitchen light is off'
+    },
+    {
+      'command': 'can you turn off the livingroom light',
+      'answer': 'alright, livingroom light is off'
+    },
+    {
+      'command': 'recognize',
+      'answer': 'Alright say hello houser'
     },
     {
       'command': 'goodbye Houser',
@@ -32,7 +61,7 @@ def dialog_seeder():
     },
     {
       'command': 'command say houser 3 times',
-      'answer': 'alright, please, when I ask you will say hey houser three times'
+      'answer': 'alright, please, when I ask you will say hello Houser three times'
     },
     {
       'command': 'command ask frequency 0',

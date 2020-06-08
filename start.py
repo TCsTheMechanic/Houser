@@ -1,3 +1,3 @@
-from app.services.main import start
+from app.controllers.main import start
 
 start()

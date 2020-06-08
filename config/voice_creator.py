@@ -2,9 +2,6 @@ from db.connection import connect
 from gtts import gTTS
 import os
 
-def __init__():
-  pass
-
 def voice():
   dialog_collection = connect().Dialog
 
